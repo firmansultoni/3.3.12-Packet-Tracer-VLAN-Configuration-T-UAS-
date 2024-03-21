@@ -15,8 +15,7 @@
 # Bagian 1: Lihat Konfigurasi VLAN Default
 ## Langkah 1: Tampilkan VLAN saat ini.
 #### Di S1, keluarkan perintah yang menampilkan semua VLAN yang dikonfigurasi. Secara default, semua antarmuka ditetapkan ke VLAN 1.
-### tampilkan gambar S1#tampilkan vlan singkat di sini 
-
+![image](https://github.com/firmansultoni/3.3.12-Packet-Tracer-VLAN-Configuration-T-UAS-/assets/113542409/94e1e1b7-7468-4237-b79c-90f3077f8c57)
 ## Langkah 2: Verifikasi konektivitas antar PC di jaringan yang sama.
 #### Perhatikan bahwa setiap PC dapat melakukan ping ke PC lain yang berbagi subnet yang sama.
 #### > PC1 dapat melakukan ping ke PC4
@@ -52,8 +51,7 @@
 
 ## Langkah 2: Verifikasi konfigurasi VLAN.
 #### Perintah mana yang hanya akan menampilkan nama VLAN, status, dan port terkait pada sebuah switch?
-
-##### S1#tampilkan gambar vlan singkat#tampilkan vlan singkat di sini
+![image](https://github.com/firmansultoni/3.3.12-Packet-Tracer-VLAN-Configuration-T-UAS-/assets/113542409/31fcc0a6-e32a-4905-8771-e34c93b86b3d)
 
 ## Langkah 3: Buat VLAN di S2 dan S3.
 ##### Gunakan perintah yang sama dari Langkah 1 untuk membuat dan memberi nama VLAN yang sama pada S2 dan S3.
@@ -134,8 +132,7 @@
 ##### `S3(config-if)# switchport voice vlan 150`
 
 ## Langkah 4: Verifikasi hilangnya konektivitas.
-#### S2# tampilkan vlan singkat # tampilkan gambarnya disisni 
-
+![image](https://github.com/firmansultoni/3.3.12-Packet-Tracer-VLAN-Configuration-T-UAS-/assets/113542409/cc88c18f-cb4c-4bb5-ac42-1932ac5c5c90)
 #### Coba ping antara PC1 dan PC4.
 
 #### Meskipun port akses ditetapkan ke VLAN yang sesuai, apakah ping berhasil? jelaskan.
