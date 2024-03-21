@@ -4,3 +4,8 @@ Simulasi "Packet Tracer - Konfigurasi VLAN" merupakan latihan praktis yang diran
 ## ______________________________________________________________________________________________________
 ## Addressing Table
 ![image](https://github.com/firmansultoni/3.3.12-Packet-Tracer-VLAN-Configuration-T-UAS-/assets/113542409/e1706f7a-164b-42fb-a10d-daff7672f74b)
+## ______________________________________________________________________________________________________
+## Objectives
+#### Part 1: Verify the Default VLAN Configuration
+#### Part 2: Configure VLANs
+#### Part 3: Assign VLANs to Ports
