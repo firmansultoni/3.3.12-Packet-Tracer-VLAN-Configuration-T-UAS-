@@ -145,7 +145,7 @@
 #### Jawab 
 ##### `Konfigurasikan port antar switch sebagai port trunk.`
 
-# Kode Untuk Switch 
+# Kode Untuk Switch
 ## Switch S1
 ##### `vlan 10`
 ##### ` name Faculty/Staff`
