@@ -9,3 +9,5 @@ Simulasi "Packet Tracer - Konfigurasi VLAN" merupakan latihan praktis yang diran
 ### Part 1: Verify the Default VLAN Configuration
 ### Part 2: Configure VLANs
 ### Part 3: Assign VLANs to Ports
+# Background
+### VLAN berguna dalam administrasi grup logis, memungkinkan anggota grup dengan mudah dipindahkan, diubah, atau ditambahkan. Kegiatan ini berfokus pada pembuatan dan penamaan VLAN, serta penetapan port akses ke VLAN tertentu.
