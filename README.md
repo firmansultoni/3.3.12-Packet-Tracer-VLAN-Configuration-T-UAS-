@@ -125,5 +125,82 @@
 ##### `S3(config-if)#switchport mode access`
 ##### `S3(config-if)#switchport access vlan 30`
 
+## Langkah 3: Tetapkan VOICE VLAN ke FastEthernet 0/11 di S3.
+#### Seperti yang ditunjukkan dalam topologi, antarmuka S3 FastEthernet 0/11 terhubung ke Cisco IP Phone dan PC4. Telepon IP berisi saklar tiga port 10/100 terintegrasi. Satu port di ponsel diberi label Switch dan terhubung ke F0/4. Port lain di ponsel diberi label PC dan terhubung ke PC4. Telepon IP juga memiliki port internal yang menghubungkan ke fungsi telepon IP.
+#### .
+#### Antarmuka S3 F0/11 harus dikonfigurasi untuk mendukung lalu lintas pengguna ke PC4 menggunakan VLAN 10 dan lalu lintas suara ke telepon IP menggunakan VLAN 150. Antarmuka juga harus mengaktifkan QoS dan mempercayai nilai Class of Service (CoS) yang ditetapkan oleh telepon IP . Lalu lintas suara IP memerlukan jumlah throughput minimum untuk mendukung kualitas komunikasi suara yang dapat diterima. Perintah ini membantu switchport untuk menyediakan jumlah throughput minimum ini.
+##### `S3(config)# interface f0/11`
+##### `S3(config-if)# mls qos trust cos`
+##### `S3(config-if)# switchport voice vlan 150`
+
+## Langkah 4: Verifikasi hilangnya konektivitas.
+#### S2# tampilkan vlan singkat # tampilkan gambarnya disisni 
+
+#### Coba ping antara PC1 dan PC4.
+
+#### Meskipun port akses ditetapkan ke VLAN yang sesuai, apakah ping berhasil? jelaskan.
+#### Jawab 
+##### `Tidak, ping gagal karena port antar switch berada di VLAN 1 dan PC1 dan PC4 berada di VLAN 10.`
+#### Apa yang dapat dilakukan untuk mengatasi masalah ini?
+#### Jawab 
+##### `Konfigurasikan port antar switch sebagai port trunk.`
+
+# Kode Untuk Switch 
+## Switch S1
+##### `vlan 10`
+##### ` name Faculty/Staff`
+##### `vlan 20`
+##### ` name Students`
+##### `vlan 30`
+##### ` name Guest(Default)`
+##### `vlan 99`
+##### ` name Management&Native`
+##### `vlan 150`
+##### ` name VOICE`
+
+## Switch S2
+##### `vlan 10`
+##### ` name Faculty/Staff`
+##### `vlan 20`
+##### ` name Students`
+##### `vlan 30`
+##### ` name Guest(Default)`
+##### `vlan 99`
+##### ` name Management&Native`
+##### `vlan 150`
+##### ` name VOICE`
+##### `interface fa0/11`
+##### ` switchport mode access`
+##### ` switchport access vlan 10`
+##### `interface fa0/18`
+##### ` switchport mode access`
+##### ` switchport access vlan 20`
+##### `interface fa0/6`
+##### ` switchport mode access`
+##### ` switchport access vlan 30`
+
+## Switch S3
+##### `vlan 10`
+##### ` name Faculty/Staff`
+##### `vlan 20`
+##### ` name Students`
+##### `vlan 30`
+##### ` name Guest(Default)`
+##### `vlan 99`
+##### ` name Management&Native`
+##### `vlan 150`
+##### ` name VOICE`
+##### `interface fa0/11`
+##### ` switchport mode access`
+##### ` switchport access vlan 10`
+##### ` mls qos trust cos`
+##### ` switchport voice vlan 150`
+##### `interface fa0/18`
+##### ` switchport mode access`
+##### ` switchport access vlan 20`
+##### `interface fa0/6`
+##### ` switchport mode access`
+##### ` switchport access vlan 30`
+
 
 
